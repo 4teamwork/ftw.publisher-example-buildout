@@ -1,5 +1,6 @@
 .installed.cfg
 .mr.developer.cfg
+README.html
 bin
 buildout.cfg
 develop-eggs
