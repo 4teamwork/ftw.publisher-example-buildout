@@ -16,18 +16,15 @@ Setting it up
 
 1. Create a symlink pointing to the preferred buildout config
 
-::
     $ ln -s plone3.cfg buildout.cfg
 
 2. Run bootstrap and buildout
 
-::
     $ python2.4 bootstrap.py
     $ bin/buildout
 
 3. Start the instances
 
-::
     $ bin/instanceSender start
     $ bin/instanceReceiver start
 
@@ -57,14 +54,13 @@ Setting it up
 8. If you can't wait 10 minutes, go to the publisher control panel and hit the
    "Execute queue" button ;-) You should get something like that:
 
-::
-    Executing Queue: 1 of 1 objects to 1 realms
-
-    executing "push" on "Demo" (at /sendersite/demo | UID a3174ad8704d6490af54c3d70985149c)
-    ... request data length: 3314
-    ... to realm http://localhost:9080/receiversite
-    ... got result: ObjectCreatedState
-    None
+        Executing Queue: 1 of 1 objects to 1 realms
+        -
+        executing "push" on "Demo" (at /sendersite/demo | UID a3174ad8704d6490af54c3d70985149c)
+        ... request data length: 3314
+        ... to realm http://localhost:9080/receiversite
+        ... got result: ObjectCreatedState
+        None
 
    The object was created, the "None" means that no exceptions were raised at the
    receiver instance, which is good.
