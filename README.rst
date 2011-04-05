@@ -14,17 +14,24 @@ buildouts for each instance. The two instances will point to two seperate databa
 Setting it up
 =============
 
-1. Create a symlink pointing to the preferred buildout config
+1. Create a file `buildout.cfg` extending which extends from *plone3.cfg* and
+   *sources-readonly.cfg* (optionally).
 
-    $ ln -s plone3.cfg buildout.cfg
+::
+    [buildout]
+    extends =
+        plone3.cfg
+        sources-readonly.cfg
 
 2. Run bootstrap and buildout
 
+::
     $ python2.4 bootstrap.py
     $ bin/buildout
 
 3. Start the instances
 
+::
     $ bin/instanceSender start
     $ bin/instanceReceiver start
 
@@ -54,6 +61,7 @@ Setting it up
 8. If you can't wait 10 minutes, go to the publisher control panel and hit the
    "Execute queue" button ;-) You should get something like that:
 
+::
         Executing Queue: 1 of 1 objects to 1 realms
         -
         executing "push" on "Demo" (at /sendersite/demo | UID a3174ad8704d6490af54c3d70985149c)
@@ -64,3 +72,20 @@ Setting it up
 
    The object was created, the "None" means that no exceptions were raised at the
    receiver instance, which is good.
+
+
+=====
+Links
+=====
+
+The main project package is `ftw.publisher.sender` since it contains all the
+configuration panels and the most tools - but without the other mandatory
+packages it will not work.
+Here are some additional links:
+
+- Publisher packages on pypi: http://pypi.python.org/pypi?%3Aaction=search&term=ftw.publisher&submit=search
+- Main github project repository: https://github.com/4teamwork/ftw.publisher.sender
+- Issue tracker: https://github.com/4teamwork/ftw.publisher.sender/issues
+- Wiki: https://github.com/4teamwork/ftw.publisher.sender/wiki
+- Source code repository of the example package: https://github.com/4teamwork/ftw.publisher.example
+- Source code repository of the example buildout: https://github.com/4teamwork/ftw.publisher-example-buildout
