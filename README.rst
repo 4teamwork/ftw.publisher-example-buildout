@@ -17,6 +17,7 @@ Setting it up
 1. Create a file `buildout.cfg` extending which extends from *plone3.cfg* and
    *sources-readonly.cfg* (optionally).
 
+buildout.cfg:
 ::
     [buildout]
     extends =
@@ -25,12 +26,14 @@ Setting it up
 
 2. Run bootstrap and buildout
 
+shell:
 ::
     $ python2.4 bootstrap.py
     $ bin/buildout
 
 3. Start the instances
 
+shell:
 ::
     $ bin/instanceSender start
     $ bin/instanceReceiver start
@@ -61,6 +64,7 @@ Setting it up
 8. If you can't wait 10 minutes, go to the publisher control panel and hit the
    "Execute queue" button ;-) You should get something like that:
 
+expected output:
 ::
         Executing Queue: 1 of 1 objects to 1 realms
         -
