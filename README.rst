@@ -93,3 +93,4 @@ Here are some additional links:
 - Wiki: https://github.com/4teamwork/ftw.publisher.sender/wiki
 - Source code repository of the example package: https://github.com/4teamwork/ftw.publisher.example
 - Source code repository of the example buildout: https://github.com/4teamwork/ftw.publisher-example-buildout
+- Continuous integration: https://jenkins.4teamwork.ch/job/ftw.publisher-example-buildout/
